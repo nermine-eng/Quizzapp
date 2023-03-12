@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Quizz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <script src="quiz.js"></script>
+
+</head>   
+<body>
+    <h1>My Quizz</h1>
+    <h2> Choisissez les réponses correctes    </h2>
+    <form action="correction.html" class="form-group">
+    
+       <ol>
+        <div>
+        <li>HTML c'est quoi ? <br>
+            <img src="question1.png" alt="HTML"  >
+         <input type="Checkbox" id="a" name="fav_language" value="a">
+         <label for="a"> Le protocole utilisé pour se connecter à Internet</label><br>
+         <input type="Checkbox" id="b" name="fav_language" value="b">
+         <label for="b">  Le nom du serveur sur lequel on se connecte</label><br>
+         <input type="Checkbox" id="c" name="fav_language" value="c">
+         <label for="c">  Un langage normalisé de description des pages Web</label><br>
+         <input type="Checkbox" id="d" name="fav_language" value="d">
+         <label for="d"> Hypertext Markup Language</label><br>
+        </li>
+      
+        </div><br>
+        <br>
+        <div>
+            <li>Comment sélectionner une option par défaut dans une liste déroulante en HTML ? <br>
+                <img src="question5.png" alt="HTML" >
+             <input type="Checkbox" id="q" name="fav_language" value="q">
+             <label for="q"> Utiliser l'attribut "default" dans la balise "select">"</label><br>
+             <input type="Checkbox" id="r" name="fav_language" value="r">
+             <label for="r">  Utiliser l'attribut "preselected" dans la balise "option"</label><br>
+             <input type="Checkbox" id="s" name="fav_language" value="s">
+             <label for="s">  Utiliser l'attribut "selected" dans la balise "option"</label><br>
+             <input type="Checkbox" id="t" name="fav_language" value="t">
+             <label for="t">  Utiliser l'attribut "selected" dans la balise "select"</label><br>
+            </li>
+        </div><br>
+        <div>
+            <li>HTML Comment insérer une vidéo YouTube dans une page HTML ? <br>
+                <img src="question3.png" alt="HTML" >
+             <input type="Checkbox" id="e" name="fav_language" value="e">
+             <label for="e"> Utiliser l'élément "video" avec un attribut source de l'URL </label><br>
+             <input type="Checkbox" id="f" name="fav_language" value="f">
+             <label for="f">  Utiliser l'API YouTube pour insérer la vidéo dans la page</label><br>
+             <input type="Checkbox" id="g" name="fav_language" value="g">
+             <label for="g">  Utiliser l'élément "iframe" avec l'URL de la vidéo  dans l'attribut src</label><br>
+             <input type="Checkbox" id="h" name="fav_language" value="h">
+             <label for="h">Il n'y a pas de moyen d'insérer une vidéo YouTube dans une page HTML</label><br>
+            </li>
+        </div><br>
+        <br>
+        <div>
+            <li>Comment créer une liste déroulante (select) avec des options provenant d'une base de données ? <br>
+                <img src="question2.png" alt="HTML" >
+             <input type="Checkbox" id="i" name="fav_language" value="i">
+             <label for="i"> Utiliser PHP pour générer la liste déroulante à partir de la base de données</label><br>
+             <input type="Checkbox" id="j" name="fav_language" value="j">
+             <label for="j"> Utiliser JavaScript pour récupérer les données  générer la liste déroulante</label><br>
+             <input type="Checkbox" id="k" name="fav_language" value="k">
+             <label for="k">  Un Utiliser l'élément "datalist" avec l'attribut list pour récupérer les données de la base de données</label><br>
+             <input type="Checkbox" id="l" name="fav_language" value="l">
+             <label for="d"> On ne peut pas avec le HTML</label><br>
+            </li>
+        </div><br>
+        <br>
+        <div>
+            <li>Comment créer une liste ordonnée numérotée à partir de la valeur 5 avec HTML ? <br>
+                <img src="question4.png" alt="HTML" >
+             <input type="Checkbox" id="m" name="fav_language" value="incorrect">
+             <label for="m"> ol type="5"</label><br>
+             <input type="Checkbox" id="n" name="fav_language" value="correct">
+             <label for="n">  ol start="5"</label><br>
+             <input type="Checkbox" id="o" name="fav_language" value="incorrect">
+             <label for="o">  ol value="5"</label><br>
+             <input type="Checkbox" id="p" name="fav_language" value="correct">
+             <label for="p"> On ne peut pas créer une liste ordonnée numérotée à partir d'une valeur spécifique</label><br>
+            </li>
+        </div><br>
+        <br>
+       
+        <br>
+        
+        </div><br>
+        
+        </ol>
+        <input type="submit" id="submit-button"value="Envoyer mes réponses" class="btn">
+        <button onclick="window.location.href='correction.html'" class="mon-bouton" >Aller à la page 2</button>
+</form>
+// Récupération du formulaire
+<script>
+const form = document.querySelector('form');
+
+// Écouteur d'événement pour la soumission du formulaire
+form.addEventListener('submit', (event) => {
+  // Empêche la soumission du formulaire
+  event.preventDefault();
+
+  // Récupération des réponses sélectionnées
+  const answers = form.querySelectorAll('input[type="checkbox"]:checked');
+
+  // Calcul du score
+  let score = 0;
+  answers.forEach((answer) => {
+    if (answer.value === 'c' && answer.value === 'd' || answer.value === 't' || answer.value === 'g' || answer.value === 'i' || answer.value === 'n') {
+      score++;
+    }
+  });
+
+  // Affichage du score
+  alert(`Votre score est de ${score} / 5`);
+});
+</script>
+
+</body>
+</html>

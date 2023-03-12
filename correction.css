@@ -1,0 +1,92 @@
+img {
+    width: 10%;
+    float: right;
+    margin-left: 600px;
+    margin-top: -10px;
+  }
+  
+  /* Body */
+body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  h1 {
+    color: #4d4d4d;
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #666;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Quiz */
+  form {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  ol {
+    list-style-type: decimal;
+    margin-left: 5px;
+    padding-left: 0;
+  }
+  
+  li {
+   
+    border: 1px solid #011133;
+    border-radius: 5px;
+    padding: 20px;
+    color:#010005;
+    font-weight:bold;
+    padding-left: 15px;
+    margin-left: 10px;
+  }
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  label {
+    color: #010005;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  /* Feedback */
+  .correct {
+    background-color: #55a834;
+    border-color: #5ca322;
+  }
+  
+  .wrong {
+    background-color: #f53535;
+    border-color: #bd3131;
+  }
+  p {
+    font-style: italic;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+  }
+  input[type="submit"] {
+    display: block;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4CAF50;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #2E8B57;
+  }
+  
+ 
+ 
